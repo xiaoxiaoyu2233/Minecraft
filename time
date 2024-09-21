@@ -154,7 +154,7 @@ local Script = {
 }
 
 local EntityName = {"BackdoorRush", "BackdoorLookman", "RushMoving", "AmbushMoving", "Eyes", "Screech", "Halt", "JeffTheKiller", "A60", "A120"}
-local SideEntityName = {"FigureRig", "GiggleCeiling", "GrumbleRig", "Snare"}
+local SideEntityName = {"FigureRig", "GiggleCeiling", "GrumbleRig", "陷阱"}
 local ShortNames = {
     ["BackdoorRush"] = "Blitz",
     ["JeffTheKiller"] = "Jeff The Killer"
@@ -1753,7 +1753,7 @@ local BypassGroupBox = Tabs.Exploits:AddRightGroupbox("速度绕过") do
     
     BypassGroupBox:AddToggle("DeleteSeek", {
         Text = "绕过seek追逐",
-        Default = true
+        Default = false
     })
 end
 
