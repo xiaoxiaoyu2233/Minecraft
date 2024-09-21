@@ -1285,8 +1285,7 @@ Sound.SoundId = ("rbxassetid://2533608894") Sound:Play()
                     bypassed = true
                     Options.SpeedSlider:SetMax(45)
                     Options.FlySpeed:SetMax(75)
-
-                    Script.Functions.Alert("Bypassed the anticheat successfully, this will only last until the next cutscene!", 7)
+                    
                     if workspace:FindFirstChild("_internal_mspaint_acbypassprogress") then workspace:FindFirstChild("_internal_mspaint_acbypassprogress"):Destroy() end
                 end
             end)
