@@ -1285,7 +1285,8 @@ Sound.SoundId = ("rbxassetid://2533608894") Sound:Play()
                     bypassed = true
                     Options.SpeedSlider:SetMax(45)
                     Options.FlySpeed:SetMax(75)
-                    
+
+                   
                     if workspace:FindFirstChild("_internal_mspaint_acbypassprogress") then workspace:FindFirstChild("_internal_mspaint_acbypassprogress"):Destroy() end
                 end
             end)
@@ -2334,7 +2335,6 @@ Sound.SoundId = ("rbxassetid://2533608894") Sound:Play()
                 -- Movement
                 while Toggles.AutoRooms.Value and not Library.Unloaded do
                     if latestRoom.Value == 1000 then
-                        Script.Functions.Alert("You have reached A-1000")
                         break
                     end
 
@@ -2518,7 +2518,7 @@ Sound.SoundId = ("rbxassetid://2533608894") Sound:Play()
         end)
 
         Toggles.FigureGodmodeFools:OnChanged(function(value)
-            if value and not Toggles.GodmodeNoclipBypassFools.Value then Toggles.GodmodeNoclipBypassFools:SetValue(true); Script.Functions.Alert("Godmode/Noclip Bypass is required to use figure godmode") end
+            if value and not Toggles.GodmodeNoclipBypassFools.Value then Toggles.GodmodeNoclipBypassFools:SetValue(true);  end
             if latestRoom.Value ~= 50 or latestRoom.Value ~= 100 then return end
 
             for _, figure in pairs(workspace.CurrentRooms:GetDescendants()) do
@@ -3475,7 +3475,7 @@ Library:GiveSignal(RunService.RenderStepped:Connect(function()
 
                         local result = Anchor:FindFirstChildOfClass("RemoteFunction"):InvokeServer(CurrentGameState.AnchorCode)
                         if result then
-                            Script.Functions.Alert("Solved Anchor " .. CurrentAnchor .. " successfully!", 5)
+                            
                         end
                     end)
                 end
@@ -3498,7 +3498,7 @@ Library:GiveSignal(RunService.RenderStepped:Connect(function()
         if isFools then
             local HoldingItem = Script.Temp.HoldingItem
             if HoldingItem and not isnetowner(HoldingItem) then
-                Script.Functions.Alert("You are no longer holding the item due to network owner change!", 5)
+               
                 Script.Temp.HoldingItem = nil
             end
     
